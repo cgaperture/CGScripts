@@ -14,7 +14,7 @@ namespace CGAssassinationTest
         Ped targetPed;
         Vector3 locationPos;
 
-        bool disableWantedLevel = true;
+        bool disableWantedLevel = false;
         bool locationObjective = false;
         bool assassinateObjective = false;
 
@@ -64,6 +64,7 @@ namespace CGAssassinationTest
                     {
                         locationObjective = true;
                         LocationObjective();
+                        disableWantedLevel = true;
                     }
 
                     if (checkpoint != -1 && locationObjective)
@@ -123,6 +124,7 @@ namespace CGAssassinationTest
                 case (HeistState.Money):
                     AwardMoney();
                     CleanupBooleans();
+                    
                     currentState = HeistState.NotActive;
                     break;
             }
@@ -202,6 +204,7 @@ namespace CGAssassinationTest
         {
             locationObjective = false;
             assassinateObjective = false;
+            disableWantedLevel = false;
         }
     }
 }

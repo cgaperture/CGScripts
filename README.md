@@ -1,2 +1,4 @@
 # CGScripts
-Scripts for SHVDN 3.6.0 nightly 120
+
+Scripts for SHVDN 3.7.0 nightly 189
+
